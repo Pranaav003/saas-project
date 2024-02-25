@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-export function getRandomPrompt(prompt) {
+export function getRandomPrompt(prompt: any[]) {
   const randomIndex = Math.floor(Math.random() * prompt.length);
   return prompt[randomIndex]
 }
