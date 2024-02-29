@@ -13,7 +13,7 @@ const LandingHero = () => {
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                     <TypeWriterComponent 
                         options = {{
-                             strings: ["Developers", "Designers", "Marketers", "Entrepreneurs", "Students"],
+                             strings: ["Developers", "Marketers", "Entrepreneurs", "Students"],
                              autoStart: true,
                              loop: true,
                         }}

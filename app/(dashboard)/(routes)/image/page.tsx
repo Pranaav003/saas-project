@@ -21,6 +21,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
+import { getRandomPrompt } from "@/lib/utils";
+import { surpriseMePrompts } from "@/app/prompts/imgprompt";
 
 const PhotoPage = () => {
   const proModal = useProModal();
@@ -69,7 +71,7 @@ const PhotoPage = () => {
       />
       <div className="px-4 lg:px-8">
         <Form {...form}>
-          <form 
+          <form
             onSubmit={form.handleSubmit(onSubmit)} 
             className="
               rounded-lg 
@@ -92,7 +94,7 @@ const PhotoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading} 
-                      placeholder="A picture of a horse in Swiss alps" 
+                      placeholder = {getRandomPrompt(surpriseMePrompts)}
                       {...field}
                     />
                   </FormControl>

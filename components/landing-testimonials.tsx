@@ -1,35 +1,36 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import Image from "next/image";
 
 const testimonials = [
     {
         name: "Antonio",
-        avatar: "A",
+        avatar: "/antonio.png",
         title:"Software Engineer",
-        description: "I have been using this tool has been a game changer, saving me time and effort in content creation."
+        description: "Using this tool has been a game changer, saving me time and effort in content creation."
     },
     {
-        name: "Pranaav",
-        avatar: "P",
+        name: "Aira",
+        avatar: "/aira.png",
         title:"Software Enthusiast",
-        description: "I love developing strange images to scare my girlfriend with!"
+        description: "I love creating websites, and this tool has helped me create content faster and more efficiently."
     },
     {
-        name: "Nada",
-        avatar: "N",
-        title:"Pranaav's Girlfriend",
-        description: "Pranaav's great! (I'm being held hostage)"
+        name: "Sofia",
+        avatar: "/sofia.png",
+        title:"Game Designer",
+        description: "Genius is a quick and foolproof way to generate assets and ideas for my games."
     },
     {
         name: "Robert",
-        avatar: "R",
+        avatar: "/robert.png",
         title:"CEO",
         description: "Genius speeds up production and keeps my team on track for high value objectives."
     },
 ];
 
-const LandingContent = () => {
+const LandingTestimonials = () => {
     return (
         <div className="px-10 pb-20">
           <h2 className="text-center text-4xl text-white font-extrabold mb-10">Testimonials</h2>
@@ -39,7 +40,12 @@ const LandingContent = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-x-2">
                     <div>
-                      <p className="text-lg">{item.name}</p>
+                      <div className="inline-flex gap-x-2">
+                        <div className = "rounded-full overflow-hidden border border-white">
+                          <Image alt="headshot" src = {item.avatar} width={30} height={30}/>
+                        </div>
+                        <p className="text-lg">{item.name}</p>
+                      </div>
                       <p className="text-zinc-400 text-sm">{item.title}</p>
                     </div>
                   </CardTitle>
@@ -54,4 +60,4 @@ const LandingContent = () => {
       )
 };
 
-export default LandingContent;
+export default LandingTestimonials;
