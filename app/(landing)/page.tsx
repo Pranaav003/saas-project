@@ -8,7 +8,7 @@ import LandingTools from "@/components/landing_tools";
 
 const LandingPage = () => {
   return (
-    <div className = "h-full">
+    <div className = "h-full w-full">
       <LandingNavbar />
       <LandingHero />
       <LandingTestimonials />
