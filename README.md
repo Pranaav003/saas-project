@@ -17,8 +17,6 @@ Page loading state
 Stripe monthly subscription
 Free tier with API limiting
 How to write POST, DELETE, and GET routes in route handlers (app/api)
-How to fetch data in server react components by directly accessing database (WITHOUT API! like Magic!)
-How to handle relations between Server and Child components!
 How to reuse layouts
 Folder structure in Next 13 App Router
 
